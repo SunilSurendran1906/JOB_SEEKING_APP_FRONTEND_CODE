@@ -19,12 +19,12 @@ const Home = () => {
         }
       )
       .then((res) => {
-        setUser(res.data.job);
+        setUser(res.data.user);
       })
       .catch((error) => {
         setIsAuthorized(false);
       });
-  }, []);
+  }, [isAuthorized]);
   if (!isAuthorized) {
     return <Navigate to={"/login"} />;
   }
