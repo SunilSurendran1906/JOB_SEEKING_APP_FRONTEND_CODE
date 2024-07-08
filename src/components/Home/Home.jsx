@@ -20,10 +20,10 @@ const Home = () => {
       )
       .then((res) => {
         setUser(res.data.user);
-        setIsAuthorized(true);
+     
       })
       .catch((error) => {
-        setIsAuthorized(false);
+        error
       });
   }, []);
   if (!isAuthorized) {
