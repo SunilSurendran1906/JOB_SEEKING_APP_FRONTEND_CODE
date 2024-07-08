@@ -24,7 +24,7 @@ const Home = () => {
       .catch((error) => {
         setIsAuthorized(false);
       });
-  }, [isAuthorized]);
+  }, []);
   if (!isAuthorized) {
     return <Navigate to={"/login"} />;
   }
